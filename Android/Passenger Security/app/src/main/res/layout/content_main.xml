@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?android:attr/actionBarSize"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.railway.security.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <Button
+        android:id="@+id/button_regfir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:drawableTop="@drawable/ic_regfir"
+        android:background="@drawable/button"
+        android:padding="10dp"
+        android:text="Register FIR"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/button_showstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:drawableTop="@drawable/ic_info"
+        android:background="@drawable/button"
+        android:padding="10dp"
+        android:text="Show Status"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/button_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/button"
+        android:padding="10dp"
+        android:drawableTop="@drawable/ic_call"
+        android:text="Call 182"
+        android:textColor="#fff" />
+
+
+    <Button
+        android:id="@+id/button_panic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/circle_button"
+        android:padding="10dp"
+        android:text="Panic"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        tools:ignore="DuplicateIds" />
+
+
+</LinearLayout>
+</android.support.v4.widget.NestedScrollView>
