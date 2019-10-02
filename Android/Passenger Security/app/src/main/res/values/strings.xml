@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Passenger Security</string>
+    <string name="getMobile">http://192.168.43.119/PassengerSecurity/GetMobile.php</string>
+    <string name="insertUser">http://192.168.43.119/PassengerSecurity/InsertUser.php</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="getPNRDetails">http://192.168.43.119/PassengerSecurity//GetPNRDetail.php</string>
+    <string name="registerFIR">http://192.168.43.119/PassengerSecurity/InsertFIR.php</string>
+    <string name="getFirDetails">http://192.168.43.119/PassengerSecurity/GetFirDetails.php</string>
+    <string name="insertPanic">http://192.168.43.119/PassengerSecurity/InsertPanic.php</string>
+    <string name="google_maps_key">AIzaSyDruEBmunYS0MpX7ocB4sdXG89MHTyDf10</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string-array name="CrimeTypes">
+        <item>Theft</item>
+        <item>Robbery</item>
+        <item>Dacoity</item>
+        <item>Suspecious Thing/Person</item>
+        <item>Accident</item>
+        <item>Murder</item>
+
+    </string-array>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

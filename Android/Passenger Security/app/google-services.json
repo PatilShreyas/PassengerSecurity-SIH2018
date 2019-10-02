@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "579389956358",
+    "firebase_url": "https://passenger-security-61486.firebaseio.com",
+    "project_id": "passenger-security-61486",
+    "storage_bucket": "passenger-security-61486.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579389956358:android:61acb3f21b96771a50be87",
+        "android_client_info": {
+          "package_name": "com.passenger.security"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "579389956358-85d6o54gv8aif37452sd0e8auabq39cj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.passenger.security",
+            "certificate_hash": "81d12896bd1bef6b349163cdcbc6d68bed8c4c44"
+          }
+        },
+        {
+          "client_id": "579389956358-sr7jaggsr7g5u2n0nvskknm4r0lbvs50.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAnhFaYiTPfpznk-ogqhMG322lsGV3e3g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "579389956358-sr7jaggsr7g5u2n0nvskknm4r0lbvs50.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
