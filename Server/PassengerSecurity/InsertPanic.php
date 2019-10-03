@@ -8,7 +8,7 @@
 		$query = "INSERT INTO alerts (alert_id) VALUES('$alert_id')";
 		$res = mysqli_query($conn,$query);
 		if($res){
-			$data = [ 'status' => 'Success', 'Message' => 'information added Succesfully' ];
+			$data = [ 'status' => 'Success', 'Message' => 'Information Added Succesfully' ];
 			header('Content-Type: application/json');
 			$myJSON = json_encode($data);
 			echo $myJSON;

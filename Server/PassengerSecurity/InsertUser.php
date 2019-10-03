@@ -6,9 +6,8 @@
 	$name = $_POST['name'];
 	$mobNo = $_POST['mobNo'];
 	$aadhaarNo = $_POST['aadhaarNo'];
-	$fcmToken = $_POST['FcmToken'];
 	
-	$query = "INSERT INTO USER (UID,NAME,MOBILE_NO,AADHAAR_NO,FCM_TOKEN) VALUES('$uid','$name','$mobNo','$aadhaarNo','$fcmToken')";
+	$query = "INSERT INTO USER (UID,NAME,MOBILE_NO,AADHAAR_NO) VALUES('$uid','$name','$mobNo','$aadhaarNo')";
 
 	
 	$res = mysqli_query($conn,$query);

@@ -3,7 +3,7 @@ error_reporting(0);
 
 $alert_id = $_GET["alert_id"];
 
-$response = file_get_contents('PASTE_YOUR_FIREBASE_DATABASE_URL_HERE/user/'."$alert_id".'.json');
+$response = file_get_contents('https://passenger-security-61486.firebaseio.com/user/'."$alert_id".'.json');
 $var = $response;
 
 $myJSON = json_decode($var,true);
@@ -148,7 +148,9 @@ function play_audio(task) {
 						
 					</div>
 					<div class="card-body" style="height:500px">
-						<div id="map" style="width:fit-content%; height:100%"></div>
+						<div id="map" style="width:fit-content%; height:90%"></div>
+						<div class="h5 m-2"><a class="link" href="<?php echo "http://maps.google.com/maps?q=loc:$latitude,$longitude" ?>" target="_blank">VIEW ON GOOGLE MAPS</a></div>
+					
 					</div>
 				</div>
 			</div>
