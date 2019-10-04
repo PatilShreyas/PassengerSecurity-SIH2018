@@ -57,44 +57,61 @@
 		
 		echo '<body>';
         echo '<table border="1">';
-		echo "<thead>";
-		echo "<tr>";
-		echo "<th>Name</th>";
-        echo "<th>Mobile No</th>";
-		echo "<th>Aadhaar No</th>";
-		echo "<th>PNR</th>";
-		echo "<th>Last Station</th>";
-		echo "<th>Crime</th>";
-		echo "<th>Information</th>";
-		echo "<th>Status</th>";
-		echo "</tr>";
-		echo "</thead>";   
+		
 		
         foreach($json_decoded as $result){
           	echo '<tr>';
-			echo '<td>'.$result->NAME.'</td>';
-            echo '<td>'.$result->MOBILE_NO.'</td>';
-			echo "<td><a href='ShowAadhaarDetails.php?UID=".$result->AADHAAR_NO."'>".$result->AADHAAR_NO."</a></td>";
-			echo "<td><a href='ShowPNRDetails.php?PNR=".$result->PNR_NO."'>".$result->PNR_NO."</a></td>";
-			echo '<td>'.$result->LAST_STATION.'</td>';
-			echo '<td>'.$result->CRIME.'</td>';
-			echo '<td>'.$result->INFO.'</td>';
+				echo "<th>Name</th>";
+				echo '<td>'.$result->NAME.'</td>';
+			echo "</tr>";
 			
-			echo '<td style="color:';
-			switch($result->STATUS) {
-				case "APPROVED": 
-					echo 'green';
-					break;
-				case "REJECTED": 
-					echo 'red';
-					break;	
-					
-				case "PENDING": 
-					echo 'orange';
-					break;
-			}
-			echo '">'.$result->STATUS.'</td>';
-          	
+			echo '<tr>';
+				echo "<th>Mobile No</th>";
+				echo '<td>'.$result->MOBILE_NO.'</td>';
+			echo '</tr>';
+			
+			echo '<tr>';
+				echo "<th>Aadhaar Number</th>";
+				echo "<td><a href='ShowAadhaarDetails.php?UID=".$result->AADHAAR_NO."'>".$result->AADHAAR_NO."</a></td>";
+			echo '</tr>';
+			
+			echo '<tr>';
+				echo "<th>PNR</th>";
+				echo "<td><a href='ShowPNRDetails.php?PNR=".$result->PNR_NO."'>".$result->PNR_NO."</a></td>";
+			echo '</tr>';
+			
+			echo '<tr>';
+				echo "<th>Last Station</th>";
+				echo '<td>'.$result->LAST_STATION.'</td>';
+			echo '</tr>';
+			
+			echo '<tr>';
+				echo "<th>Crime</th>";
+				echo '<td>'.$result->CRIME.'</td>';
+			echo '</tr>';
+			
+			echo '<tr>';
+				echo "<th>Additional Information</th>";
+				echo '<td>'.$result->INFO.'</td>';
+			echo '</tr>';
+			
+			echo '<tr>';
+				echo "<th>Status</th>";
+				echo '<td><span class="badge badge-';
+				switch($result->STATUS) {
+					case "APPROVED": 
+						echo 'success';
+						break;
+					case "REJECTED": 
+						echo 'danger';
+						break;	
+						
+					case "PENDING": 
+						echo 'warning';
+						break;
+				}
+				echo '">'.$result->STATUS.'</span></td>';
+          	echo '</tr>';
 		  
 		  	$query2 = "SELECT ADDRESS FROM AADHAAR WHERE UID_NO=".$result->AADHAAR_NO."";
 	
