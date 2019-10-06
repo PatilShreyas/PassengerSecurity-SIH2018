@@ -95,6 +95,7 @@
 	echo "<th>FIR No</th>";
 	echo "<th>Applicant Name</th>";
 	echo "<th>Date & Time</th>";
+	echo "<th>Status</th>";
 	echo "</tr>";
 	echo "</thead>";   
 	foreach($json_decoded as $result){
@@ -102,7 +103,21 @@
 		echo "<td><a href='ShowFirDetails.php?firNo=".$result->FIR_NO."'>".$result->FORMATED_FIR_NO."</a></td>";
 		echo '<td>'.$result->NAME.'</td>';
 		echo '<td>'.$result->TIMESTAMP.'</td>';
-	  echo '</tr>';
+		echo '<td><span class="badge badge-';
+		switch($result->STATUS) {
+			case "APPROVED": 
+				echo 'success';
+				break;
+			case "REJECTED": 
+				echo 'danger';
+				break;	
+				
+			case "PENDING": 
+				echo 'warning';
+				break;
+		}
+		echo '">'.$result->STATUS.'</span></td>';
+		echo '</tr>';
 	}
 	
 	echo '</table>';
