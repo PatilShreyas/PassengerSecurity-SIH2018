@@ -62,7 +62,7 @@
 		
 		<div class="text-center">
 			<button type="button" class="btn btn-primary m-2" onClick="allFir()">All</button>
-			<button type="button" class="btn btn-warning m-2" onClick="pending()">Pending</button>
+			<button type="button" style="color:white" class="btn btn-warning m-2" onClick="pending()">Pending</button>
 			<button type="button" class="btn btn-success m-2" onClick="approved()">Approved</button>
 			<button type="button" class="btn btn-danger m-2" onClick="rejected()">Rejected</button>
 		</div>
@@ -103,7 +103,7 @@
 		echo "<td><a href='ShowFirDetails.php?firNo=".$result->FIR_NO."'>".$result->FORMATED_FIR_NO."</a></td>";
 		echo '<td>'.$result->NAME.'</td>';
 		echo '<td>'.$result->TIMESTAMP.'</td>';
-		echo '<td><span class="badge badge-';
+		echo '<td><span style="color:white" class="badge badge-';
 		switch($result->STATUS) {
 			case "APPROVED": 
 				echo 'success';
