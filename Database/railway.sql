@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2019 at 07:15 PM
+-- Generation Time: Oct 22, 2019 at 06:02 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.6
 
@@ -41,12 +41,10 @@ CREATE TABLE `aadhaar` (
 --
 
 INSERT INTO `aadhaar` (`UID_NO`, `NAME`, `ADDRESS`, `MOBILE_NO`, `DATE_OF_BIRTH`) VALUES
-('279467836433', 'ANKIT SHRIRAM PATIL', 'HIVARKHEDE BK., TAL JAMNER, DIST JALGAON', '+918698502533', '1999-04-22'),
-('526077942889', 'PREM RAMESH CHAVHAN', 'WANKHEDE COLONY,JALGAON', '+919028723187', '1999-09-10'),
-('591774672168', 'RUCHITA YOGESH BHOGE', 'VIDYUT COLONY, JALGAON', '+917057594556', '1999-05-29'),
-('636308438360', 'ROHIT DATTATRAYA BHOKARIKAR', 'HARESHWAR NAGAR,RING ROAD,JALGAON', '+919405110018', '1999-05-04'),
 ('743740988757', 'SHREYAS SHARAD PATIL', 'NIVRUTTI NAGAR, PIMPRALA, JALGAON', '+917767084933', '1999-05-12'),
-('918340931473', 'CHETANA HITENDRA PATIL', 'VIVARE KH, TAL. RAVER, DIST. JALGAON', '+919765293672', '1999-07-08');
+('848396372700', 'MANISHA ANAND YEMUL', 'SOLAPUR , MAHARASHTRA 413005', '+918483963727', '1999-05-13'),
+('855298600700', 'PIYUSH RAMAKANT RAJPUT', 'PUNE , MAHARASHTRA 411033', '+918552986007', '1997-11-10'),
+('937202622400', 'JAGRUTI SATISH PATIL', 'JALGAON, MAHARASHTRA, 425001', '+919372026224', '1999-07-28');
 
 -- --------------------------------------------------------
 
@@ -64,7 +62,8 @@ CREATE TABLE `alerts` (
 --
 
 INSERT INTO `alerts` (`alert_id`, `time`) VALUES
-('g6saSSmI1MVi70wDZ4pCz6K0ntu2', '2019-10-02 16:58:44');
+('9YuSrTsdOeQzwQAxsithwdENqw03', '2019-10-03 10:41:52'),
+('g6saSSmI1MVi70wDZ4pCz6K0ntu2', '2019-10-06 11:34:17');
 
 -- --------------------------------------------------------
 
@@ -88,10 +87,10 @@ CREATE TABLE `fir` (
 --
 
 INSERT INTO `fir` (`FIR_NO`, `UID`, `PNR_NO`, `LAST_STATION`, `CRIME`, `INFO`, `STATUS`, `TIMESTAMP`) VALUES
-(2019, 'g6saSSmI1MVi70wDZ4pCz6K0ntu2', '7767084933', 'Jalgaon', 'Suspecious Thing/Per', '', 'PENDING', '2019-10-02 06:50:01'),
-(2020, 'g6saSSmI1MVi70wDZ4pCz6K0ntu2', '7767084933', 'Jalgaon', 'Theft', 'jdjkd.', 'APPROVED', '2019-10-02 07:40:22'),
-(2021, 'g6saSSmI1MVi70wDZ4pCz6K0ntu2', '1425367890', 'Jalgaon', 'Murder', '', 'REJECTED', '2019-10-02 11:01:23'),
-(2022, 'g6saSSmI1MVi70wDZ4pCz6K0ntu2', '7767084933', 'Pune', 'Theft', '', 'PENDING', '2019-10-02 14:53:40');
+(2023, 'g6saSSmI1MVi70wDZ4pCz6K0ntu2', '9372026224', 'Daund', 'Dacoity', 'Some people attacked on passengers', 'APPROVED', '2019-10-03 10:02:41'),
+(2025, '9YuSrTsdOeQzwQAxsithwdENqw03', '9372026224', 'daund', 'Accident', '', 'REJECTED', '2019-10-03 10:40:59'),
+(2026, 'g6saSSmI1MVi70wDZ4pCz6K0ntu2', '7767084933', 'Pune', 'Theft', 'My bags stolen by some people.', 'APPROVED', '2019-10-06 11:34:06'),
+(2027, 'g6saSSmI1MVi70wDZ4pCz6K0ntu2', '7767084933', 'Jalgaon', 'Theft', 'My mobile is stolen by some pocket cutters.', 'PENDING', '2019-10-22 10:17:34');
 
 --
 -- Triggers `fir`
@@ -123,8 +122,10 @@ CREATE TABLE `reservation` (
 INSERT INTO `reservation` (`TRAIN_NAME`, `TRAIN_NO`, `PNR_NO`, `SRC_STATION`, `DEST_STATION`, `SEAT_DETAIL`) VALUES
 ('Goa Express', '12780', '1425367890', 'Hzarat Nizamuddin', 'Vasco-da-Gama', 'S4/54'),
 ('KARNATAKA EXPRESS', '12640', '2387589328', 'DELHI', 'BANGLORE', 'S5/56'),
-('Maharastra Express', '11040', '4596321716', 'Kolhapur', 'Jalgaon', 's3/45'),
-('NAVJEEVAN EXPRESS', '12096', '7767084933', 'CHENNAI', 'AHMEDABAD', 'S6/36');
+('Maharastra Express', '11040', '4596321716', 'Kolhapur', 'Jalgaon', 'S3/45'),
+('NAVJEEVAN EXPRESS', '12096', '7767084933', 'CHENNAI', 'AHMEDABAD', 'S6/36'),
+('PUNE - BSL EXPRESS', '11026', '8552986007', 'PUNE', 'BHUSAWAL', 'S4/12'),
+('HUTATMA EXPRESS', '12157', '9372026224', 'SOLAPUR', 'PUNE', 'S5/23');
 
 -- --------------------------------------------------------
 
@@ -144,9 +145,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`UID`, `NAME`, `MOBILE_NO`, `AADHAAR_NO`) VALUES
-('62KqPSqvxrRLPx31xR25HmWkHdB2', 'CHETANA HITENDRA PATIL', '+919765293672', '918340931473'),
-('a3gypodEThZgepwhvXkEM5jOvIt2', 'SHREYAS SHARAD PATIL', '+917767084933', '743740988757'),
-('DFyvjRMCapZUQEZ96Kse0NTkE6P2', 'SHREYAS SHARAD PATIL', '+917767084933', '743740988757'),
+('9YuSrTsdOeQzwQAxsithwdENqw03', 'MANISHA ANAND YEMUL', '+918483963727', '848396372700'),
 ('g6saSSmI1MVi70wDZ4pCz6K0ntu2', 'SHREYAS SHARAD PATIL', '+917767084933', '743740988757');
 
 --
@@ -157,8 +156,7 @@ INSERT INTO `user` (`UID`, `NAME`, `MOBILE_NO`, `AADHAAR_NO`) VALUES
 -- Indexes for table `aadhaar`
 --
 ALTER TABLE `aadhaar`
-  ADD PRIMARY KEY (`UID_NO`),
-  ADD UNIQUE KEY `UID_NO` (`UID_NO`);
+  ADD PRIMARY KEY (`UID_NO`);
 
 --
 -- Indexes for table `alerts`
@@ -195,7 +193,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `fir`
 --
 ALTER TABLE `fir`
-  MODIFY `FIR_NO` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2023;
+  MODIFY `FIR_NO` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2028;
 
 --
 -- Constraints for dumped tables
