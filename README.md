@@ -39,4 +39,5 @@ Security of passengers and their belongings is of paramount importance for India
 
 After this, you're done with setup. Just run the app!
 
-
+## License
+Project is published under the [Apache 2.0](LICENSE.md) license. Feel free to clone and modify repo as you want, but don't forget to add reference to authors :)
