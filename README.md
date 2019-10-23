@@ -1,5 +1,5 @@
 # Passenger Security - Online FIR Filing System
-This is project of Smart India Hackathon 2018 - Software Edition and our Third Year DBMS Mini Project.
+This is project of Smart India Hackathon 2018 - Software Edition under the `Ministry of Railway` and our Third Year DBMS Mini Project. You can find more about project in [`/Docs`](/Docs) directory.
 
 ## Introduction
 Source [Smart India Hackathon 2018](https://innovate.mygov.in/sih_ps/passenger-security/)
