@@ -31,6 +31,7 @@ Security of passengers and their belongings is of paramount importance for India
 - Edit `Config.php` as your database credentials.
 - Go to [Firebase Console](https://console.firebase.google.com) and setup android project (Don't forgot to add `SHA` key). Download `google-services.json` file.
 - Edit `AlertDetails.php` file, Modify Firebase database path URL on 6th Line.
+- Enable Google Maps JavaScript API and modify API key in `AlertDetails.php` file.
 
 ### Android Setup:
 - Import android project files in Android Studio.
